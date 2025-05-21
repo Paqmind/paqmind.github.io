@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+    .parent {
+      display: grid;
+      grid-gap: 1rem;
+      margin: 5rem auto;
+      max-width: 20rem;
+      div {
+        background: lightblue;
+        height: 4rem;
+        text-align: center;
+        line-height: 4rem;
+        font-size: 1.5rem;
+
+        /*
+        == nth ==
+        For the nth time that day they were forced to relate the whole story
+        В энный раз за день они были вынуждены рассказать всю историю
+       */
+
+        /* An + B */
+        /* n = [0, 1, 2, 3, ...] */
+
+        /*
+        n    n+1    n+3  -n+3    2n    2n+1    2n+4     (n+3) & (-n+5)
+        0     1      3     3      -      1      4         3        5
+        1     2      4     2      2      3      6         4        4
+        2     3      5     1      4      5      8         5        3
+        3     4      6     -      6      7     10         6        2
+        4     5      7     -      8      9     12         7        1
+        */
+
+        &:nth-last-child(n+3):nth-last-child(-n+5) {
+          background: red;
+        }
+      }
+    }
+  </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+  </body>
+</html>
