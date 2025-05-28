@@ -23,58 +23,23 @@ function initSectionNav(sectionId) {
     })
   })
 
+  window.addEventListener("scroll", () => {
+    let active = -1
+    active = subSections.findIndex((subSection, index) => {
+      let elY = subSection.getBoundingClientRect().y
+      let elHeight = subSection.getBoundingClientRect().height
+      let navHeight = nav.getBoundingClientRect().height
 
-  // Option #1: onScroll
-  // window.addEventListener("scroll", () => {
-  //
-  //   // y <= 0 && (y + height > 0)
-  //   // y <= intersection && (y + height > intersection)
-  //
-  //   let active = -1
-  //   let buffer = 4
-  //   active = subSections.findIndex((subSection, index) => {
-  //     let y = subSection.getBoundingClientRect().y
-  //     let height = subSection.getBoundingClientRect().height
-  //     let intersectionY = nav.getBoundingClientRect().height + buffer
-  //
-  //     if (y <= intersectionY && (y + height > intersectionY)) {
-  //       return true
-  //     }
-  //   })
-  //
-  //   links.forEach(link => {link.classList.remove("active")})
-  //   if (active >= 0) links[active].classList.add("active")
-  // })
+      if (elY <= navHeight && elY + elHeight > navHeight) {
+        return true
+      }
+    })
 
-
-
-  // Option #2: Intersection Observer
-  let navHeight = nav.getBoundingClientRect().height
-  let screenHeight = document.documentElement.clientHeight
-  let buffer = 4
-  let options = {
-    rootMargin: `
-    -${navHeight + buffer}px 
-    0px 
-    -${screenHeight - navHeight - buffer}px 
-    0px`,
-  }
-
-  let currentId = null
-  let observer = new IntersectionObserver(
-     (entries) => {
-      entries.forEach(entry => {
-        if (currentId != entry.target.id && entry.isIntersecting) {
-           currentId = entry.target.id
-           section.querySelector("a.active")?.classList.remove("active")
-           section.querySelector(`a[href="#${currentId}"]`)
-             .classList.add("active")
-         } else if (currentId == entry.target.id && !entry.isIntersecting) {
-           section.querySelector("a.active").classList.remove("active")
-           currentId = null
-         }
-       })
-     }, options
-   )
-  subSections.forEach((s) => {observer.observe(s)})
+    links.forEach(link => {
+      link.classList.remove("active")
+    })
+    if (active >= 0) {
+      links[active].classList.add("active")
+    }
+  })
 }

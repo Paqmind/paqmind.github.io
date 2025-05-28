@@ -1,7 +1,8 @@
 :root {
   --slate-50: oklch(98.4% 0.003 247.858);
+  --slate-700: oklch(37.2% 0.044 257.287);
   --slate-950: oklch(12.9% 0.042 264.695);
-  --sky-50: oklch(97.7% 0.013 236.62)
+  --sky-300: oklch(82.8% 0.111 230.318)
 }
 html, body {
   font-size: 16px;
@@ -36,7 +37,8 @@ a {
 .section {
   padding: 4rem 0;
   &.slate {
-    background: var(--slate-50);
+    background: var(--slate-700);
+    color: white;
   }
 }
 .subsection {
@@ -75,11 +77,11 @@ a {
       border-radius: 0.5rem;
       padding: 0.5rem 1.25rem;
       &.active {
-        background: var(--sky-50);
+        background: var(--sky-300);
       }
       @media (hover: hover) {
         *&:hover {
-          background: var(--sky-50);
+          background: var(--sky-300);
         }
       }
     }
