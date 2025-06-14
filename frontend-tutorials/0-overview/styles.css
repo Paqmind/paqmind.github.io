@@ -16,6 +16,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 html, body {
+  background: var(--steel-50);
   font-size: 16px;
   color: var(--steel-950);
 }
@@ -35,15 +36,21 @@ a {
   }
 }
 .container {
-  max-width: 40rem;
+  align-items: center;
+  display: flex;
+  max-width: 650px;
   margin-inline: auto;
-  padding: 0 2rem;
+  min-height: 100vh;
+  /*padding: 0 2rem;*/
   position: relative;
 }
 .swiper {
+  margin-bottom: -1rem!important;
+  margin-top: 0!important;
   padding-bottom: 3rem!important;
   width: 100%;
   .swiper-slide {
+    border-radius: 0.25rem;
     width: 100%;
     img {
       max-width: 100%;
@@ -53,6 +60,11 @@ a {
     bottom: 1rem!important;
     .swiper-pagination-bullet {
       background: var(--steel-500);
+      border-radius: 0.25rem;
+      margin-left: 0.35rem!important;
+      margin-right: 0.35rem!important;;
+      height: 1rem;
+      width: 1rem;
       &.swiper-pagination-bullet-active {
         background: var(--indigo-500);
       }
