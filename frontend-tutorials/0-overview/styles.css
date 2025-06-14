@@ -35,12 +35,16 @@ a {
   }
 }
 .container {
-  max-width: 40rem;
+  align-items: center;
+  display: flex;
+  max-width: 650px;
   margin-inline: auto;
-  padding: 0 2rem;
+  min-height: 100vh;
+  /*padding: 0 2rem;*/
   position: relative;
 }
 .swiper {
+  margin-bottom: 1rem!important;
   padding-bottom: 3rem!important;
   width: 100%;
   .swiper-slide {
