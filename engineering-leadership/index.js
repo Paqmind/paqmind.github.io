@@ -783,8 +783,8 @@ if (SURVEY_NAME) {
     ],
   }
   const SURVEY_DATA = {
-    "title": "The evolving role of Engineering Leadership",
-    "description": "We appreciate your time and contribution to this research.",
+    "title": "Leadership Frontier",
+    "description": "Exploring leadership experiences, threats, opportunities, beliefs, and environment.",
     // "questionStartIndex": "№1",
     // "requiredMark": "(*)",
     // "showQuestionNumbers": true,
@@ -840,7 +840,7 @@ if (SUBSCRIPTION_FORM !== "undefined") {
     "pages": [{
       "name": "page1",
       "title": "Let’s stay connected!",
-      "description": `Would you be interested in receiving our research results and useful resources for engineering leaders?`,
+      "description": `Want to see what top engineering leaders are doing to succeed? Get our latest research results and resources delivered to you.`,
       "elements": [{
         "type": "panel",
         "name": "issue-report",
@@ -854,6 +854,7 @@ if (SUBSCRIPTION_FORM !== "undefined") {
           "name": "email",
           "isRequired": true,
           "title": "Your email",
+          "description": "unsubscribe at any time",
         }]
       }]
     }],
