@@ -325,7 +325,7 @@ const QUESTIONS = {
         ],
       }, {
         "type": "radiogroup",
-        "name": "background",
+        "name": "scares",
         "isRequired": false,
         "title": "What scares you out most in leadership?",
         "choices": [
@@ -346,7 +346,7 @@ const QUESTIONS = {
       "elements": [
         {
           "type": "matrix",
-          "name": "quality",
+          "name": "controversies",
           "title": "Leadership controversies",
           "columns": [
             "Agree 👍",
@@ -599,7 +599,7 @@ const QUESTIONS = {
       "elements": [
         {
           "type": "matrix",
-          "name": "quality",
+          "name": "controversies",
           "title": "Leadership controversies",
           "columns": [
             "Agree 👍",
@@ -791,7 +791,7 @@ const QUESTIONS = {
         ],
       }, {
         "type": "radiogroup",
-        "name": "background",
+        "name": "scares",
         "isRequired": false,
         "title": "What wears you out most in leadership?",
         "choices": [
@@ -812,7 +812,7 @@ const QUESTIONS = {
       "elements": [
         {
           "type": "matrix",
-          "name": "quality",
+          "name": "controversies",
           "title": "Leadership controversies",
           "columns": [
             "Agree 👍",
